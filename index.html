@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyslexic-Friendly Website</title>
+    <link href="https://fonts.cdnfonts.com/css/opendyslexic" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .dyslexic-font {
+            font-family: 'OpenDyslexic', Arial, sans-serif !important;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1em;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #fontStatus {
+            text-align: center;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        /* New styles for text converter */
+        .converter-section {
+            margin-top: 40px;
+            border-top: 2px solid #eee;
+            padding-top: 20px;
+        }
+
+        .converter-section h2 {
+            font-size: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-family: Arial, sans-serif;
+        }
+
+        #outputText {
+            width: 100%;
+            min-height: 150px;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dyslexic-Friendly Website</h1>
+        <p>
+            This website uses OpenDyslexic, a font designed to make reading easier for people with dyslexia. 
+            The letters are weighted and styled to reduce confusion and flipping.
+        </p>
+        <p>
+            Here's some additional sample text to demonstrate the font differences:
+        </p>
+        <p>
+            The quick brown fox jumps over the lazy dog. This pangram contains every letter of the alphabet, 
+            making it perfect for testing font displays.
+        </p>
+        <div id="fontStatus">Current font: Regular</div>
+        <button onclick="toggleFont()">Switch to Dyslexic-Friendly Font</button>
+
+        <!-- New text converter section -->
+        <div class="converter-section">
+            <h2>Text Converter</h2>
+            <p>Enter your text below to convert it to dyslexic-friendly format:</p>
+            <textarea id="inputText" placeholder="Type or paste your text here..."></textarea>
+            <button onclick="convertText()">Convert Text</button>
+            <div id="outputText" class="dyslexic-font"></div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.body;
+        const button = document.querySelector('button');
+        const fontStatus = document.getElementById('fontStatus');
+
+        // Original font toggle function
+        function toggleFont() {
+            if (body.classList.contains('dyslexic-font')) {
+                body.classList.remove('dyslexic-font');
+                button.textContent = 'Switch to Dyslexic-Friendly Font';
+                fontStatus.textContent = 'Current font: Regular';
+            } else {
+                body.classList.add('dyslexic-font');
+                button.textContent = 'Switch to Regular Font';
+                fontStatus.textContent = 'Current font: Dyslexic-friendly';
+            }
+        }
+
+        // Text conversion function (triggered only on button click)
+        function convertText() {
+            const input = document.getElementById('inputText');
+            const output = document.getElementById('outputText');
+            
+            if (input.value.trim() === '') {
+                output.textContent = 'Please enter some text to convert.';
+                return;
+            }
+            
+            // Convert text to dyslexic-friendly by simply applying the font
+            output.textContent = input.value;
+        }
+    </script>
+</body>
+</html>
+
