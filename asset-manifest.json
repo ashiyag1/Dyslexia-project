@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/EasyNotes/static/css/main.ce15e15b.css",
+    "main.js": "/EasyNotes/static/js/main.88428550.js",
+    "static/js/239.1b9bb740.chunk.js": "/EasyNotes/static/js/239.1b9bb740.chunk.js",
+    "static/js/213.89e81d65.chunk.js": "/EasyNotes/static/js/213.89e81d65.chunk.js",
+    "static/js/455.116384d0.chunk.js": "/EasyNotes/static/js/455.116384d0.chunk.js",
+    "index.html": "/EasyNotes/index.html",
+    "main.ce15e15b.css.map": "/EasyNotes/static/css/main.ce15e15b.css.map",
+    "main.88428550.js.map": "/EasyNotes/static/js/main.88428550.js.map",
+    "239.1b9bb740.chunk.js.map": "/EasyNotes/static/js/239.1b9bb740.chunk.js.map",
+    "213.89e81d65.chunk.js.map": "/EasyNotes/static/js/213.89e81d65.chunk.js.map",
+    "455.116384d0.chunk.js.map": "/EasyNotes/static/js/455.116384d0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce15e15b.css",
+    "static/js/main.88428550.js"
+  ]
+}
