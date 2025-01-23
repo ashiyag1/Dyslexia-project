@@ -1,0 +1,51 @@
+/* src/styles/SummaryOptions.css */
+.summary-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  .summary-options h2 {
+    font-family: 'OpenDyslexic', Arial, sans-serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .option-button {
+    background: #1abc9c;
+    color: #fff;
+    font-family: 'OpenDyslexic', Arial, sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .option-button:hover {
+    background: #16a085;
+    transform: scale(1.1);
+  }
+  
+  .option-button:active {
+    transform: scale(1.05);
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+  
